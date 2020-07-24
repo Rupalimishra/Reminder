@@ -1,0 +1,28 @@
+{
+    "name": "Reminder Alert",
+    "description": "It is used for making task with an alarm",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "permissions": [
+        "alarms",
+        "notifications",
+        "storage",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_title": "Reminder Alarm",
+        "default_popup": "public/dist/index.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "icons": {
+        "48": "icon48.png",
+        "96": "icon96.png",
+        "128": "icon128.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
